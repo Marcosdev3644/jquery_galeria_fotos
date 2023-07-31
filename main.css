@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: white;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button {
+    padding: 8px;
+}
+
+button {
+    background-color: green;
+    border: none;
+    cursor:pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* CAIXA ALTA */
+    color: white;
+}
+
+#botao-cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* quando a imagem chegar no limite da tela, vai criar uma nova linha */
+}
+
+ul li {
+    max-width: 25%; /* se a tela tem 100%, e eu quero 4 imagem por linha, fica 25% */
+    list-style: none;
+    position: relative; /* se o elemento tem a posição "absolute", o elemento principal precisar ter o "relative" */
+    max-height: 200px;
+    overflow-y: hidden; /* todo conteúdo exibido a mais de "200px" será apagado, "cortado" */
+}
+
+ul li img {
+    width: 100%;
+}
+
+.style-link-img {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /* posicionar o elemento no canto inferior do li */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* opacidade da imagem, ela vai de '0' a '1', em ordem decimal: 0.1, 0.2 ... */
+    transition: all ease .5s; /* transição quando passar o mouse */
+}
+
+.style-link-img a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li:hover .style-link-img {
+    opacity: 1;
+}
